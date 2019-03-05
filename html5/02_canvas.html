@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas HTML5</title>
+</head>
+<body>
+<h2>CUADRADO</h2>
+	<canvas id="cuadrado"></canvas>
+<h2>RECTANGULO</h2>	
+	<canvas id="rectangulo"></canvas>
+ <h2>CIRCULO</h2>   
+    <canvas id="circulo"></canvas>
+<h2>CORAZON</h2>    
+    <canvas id="corazon"></canvas>
+ <h2>TRIANGULO</h2>   
+    <canvas id="triangulo"></canvas>
+ 
+
+
+
+<script type="text/javascript">
+		var c = document.getElementById('cuadrado');
+		var ctx = c.getContext('2d');
+		ctx.fillStyle = "red";
+		ctx.fillRect(0,0,100,100);
+
+
+
+
+		var c = document.getElementById('rectangulo');
+		var ctx = c.getContext('2d');
+		ctx.fillStyle = "red";
+		ctx.fillRect(0,0,400,100);
+
+
+
+        var c = document.getElementById('circulo');
+		var ctx = c.getContext('2d');
+		ctx.fillStyle = "red";
+		ctx.arc(60,60,60,0,Math.PI*2,true);
+		ctx.stroke();  
+
+        var c = document.getElementById('corazon');
+		var ctx = c.getContext('2d');
+		ctx.beginPath();
+    ctx.moveTo(75,40);
+    ctx.bezierCurveTo(75,37,70,25,50,25);
+    ctx.bezierCurveTo(20,25,20,62.5,20,62.5);
+    ctx.bezierCurveTo(20,80,40,102,75,120);
+    ctx.bezierCurveTo(110,102,130,80,130,62.5);
+    ctx.bezierCurveTo(130,62.5,130,25,100,25);
+    ctx.bezierCurveTo(85,25,75,37,75,40);
+    ctx.fill();
+
+
+
+		 var c = document.getElementById('triangulo');
+		var ctx = c.getContext('2d');
+		ctx.beginPath();
+		ctx.moveTo(10,110);
+		ctx.lineTo(110,10);
+		ctx.lineTo(210,110);
+         ctx.fill();
+         ctx.stroke();
+
+
+
+
+	</script>
+</body>
+</html>
